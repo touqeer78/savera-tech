@@ -1,664 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Savera Tech | Digital Solutions</title>
-    <meta
-      name="description"
-      content="Savera Tech provides modern digital solutions, web design, and business growth services."
-    />
-    <style>
-      :root {
-        --bg-dark: #07111f;
-        --bg-soft: #0d1b2a;
-        --panel: #13263d;
-        --panel-alt: #18314b;
-        --primary: #4ecdc4;
-        --primary-2: #4da3ff;
-        --accent: #ffbf69;
-        --text: #ecf3ff;
-        --muted: #a8bbd8;
-        --line: rgba(255, 255, 255, 0.08);
-        --shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      * {
-        box-sizing: border-box;
-      }
+  <title>Savera Tech | AI, Cloud & Software</title>
 
-      html {
-        scroll-behavior: smooth;
-      }
+  <meta name="description"
+        content="Savera Tech builds practical AI, cloud and software solutions for modern businesses.">
 
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(180deg, var(--bg-dark) 0%, #0a1320 100%);
-        color: var(--text);
-        line-height: 1.6;
-      }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b1020;
+      color: #f5f7ff;
+      line-height: 1.6;
+    }
 
-      img {
-        max-width: 100%;
-      }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-      .container {
-        width: min(1120px, calc(100% - 32px));
-        margin: 0 auto;
-      }
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
 
-      .topbar {
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        backdrop-filter: blur(10px);
-        background: rgba(7, 17, 31, 0.78);
-        border-bottom: 1px solid var(--line);
-      }
+    /* Navigation */
 
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 74px;
-      }
+    nav {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
 
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-      }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-      .brand-mark {
-        width: 38px;
-        height: 38px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        display: grid;
-        place-items: center;
-        box-shadow: var(--shadow);
-        font-size: 1.1rem;
-        font-weight: 700;
-      }
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        color: var(--muted);
-        font-size: 0.96rem;
-      }
+    .logo span {
+      opacity: 0.55;
+    }
 
-      .nav-links a:hover {
-        color: var(--text);
-      }
+    /* Hero */
 
-      .nav-cta {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 22px;
-        border-radius: 999px;
-        background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        color: #021017;
-        font-weight: 700;
-        box-shadow: var(--shadow);
-      }
+    .hero {
+      padding: 110px 0 100px;
+      text-align: center;
+    }
 
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: #b9c2df;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 5.8rem);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #8ab4ff, #c59cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: auto;
+      color: #aeb7d0;
+      font-size: 1.2rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 36px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #0b1020;
+      font-weight: 600;
+    }
+
+    /* Services */
+
+    .services {
+      padding: 70px 0 110px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #8993ae;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .card-number {
+      color: #8ab4ff;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #9da7c0;
+    }
+
+    /* About */
+
+    .about {
+      padding: 100px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .about-inner {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #aeb7d0;
+      font-size: 1.05rem;
+    }
+
+    /* Contact */
+
+    .contact {
+      text-align: center;
+      padding: 110px 0;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #9da7c0;
+    }
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      color: #68728c;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 700px) {
       .hero {
-        padding: 90px 0 60px;
-      }
-
-      .hero-inner {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 36px;
-        align-items: center;
-      }
-
-      .eyebrow {
-        display: inline-block;
-        padding: 8px 14px;
-        border-radius: 999px;
-        background: rgba(78, 205, 196, 0.12);
-        border: 1px solid rgba(78, 205, 196, 0.25);
-        color: var(--primary);
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        font-size: clamp(2.8rem, 6vw, 5rem);
-        line-height: 1.05;
-        margin: 22px 0 20px;
-        letter-spacing: -0.06em;
-      }
-
-      .lead {
-        max-width: 620px;
-        font-size: 1.12rem;
-        color: var(--muted);
-      }
-
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-top: 30px;
-      }
-
-      .primary-btn,
-      .secondary-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 16px 26px;
-        border-radius: 14px;
-        font-weight: 700;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .primary-btn {
-        background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        color: #041824;
-        box-shadow: var(--shadow);
-      }
-
-      .secondary-btn {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid var(--line);
-        color: var(--text);
-      }
-
-      .primary-btn:hover,
-      .secondary-btn:hover,
-      .nav-cta:hover {
-        transform: translateY(-2px);
-      }
-
-      .hero-meta {
-        display: flex;
-        gap: 36px;
-        margin-top: 36px;
-        flex-wrap: wrap;
-      }
-
-      .stat {
-        min-width: 120px;
-      }
-
-      .stat strong {
-        display: block;
-        font-size: 1.8rem;
-        color: var(--text);
-      }
-
-      .stat span {
-        font-size: 0.85rem;
-        color: var(--muted);
-      }
-
-      .visual-card {
-        position: relative;
-        background: linear-gradient(180deg, rgba(19, 38, 61, 0.98), rgba(10, 23, 37, 0.95));
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        padding: 24px;
-        box-shadow: var(--shadow);
-      }
-
-      .dashboard {
-        background: rgba(10, 18, 28, 0.95);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 18px;
-      }
-
-      .dashboard-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 18px;
-        color: var(--muted);
-        font-size: 0.8rem;
-      }
-
-      .dots {
-        display: flex;
-        gap: 8px;
-      }
-
-      .dots span {
-        width: 10px;
-        height: 10px;
-        display: inline-block;
-        border-radius: 50%;
-      }
-
-      .dots span:nth-child(1) { background: #ff5f56; }
-      .dots span:nth-child(2) { background: #ffbd2e; }
-      .dots span:nth-child(3) { background: #27c93f; }
-
-      .chart {
-        height: 250px;
-        border-radius: 18px;
-        background:
-          linear-gradient(180deg, rgba(78, 205, 196, 0.12), rgba(78, 205, 196, 0.02)),
-          linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
-          linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-          rgba(17, 28, 41, 0.85);
-        background-size: auto, 28px 28px, 28px 28px, auto;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .chart svg {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .floating-card {
-        position: absolute;
-        right: -10px;
-        bottom: 18px;
-        background: rgba(19, 38, 61, 0.96);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 14px 16px;
-        width: 180px;
-        box-shadow: var(--shadow);
-      }
-
-      .floating-card .label {
-        color: var(--muted);
-        font-size: 0.72rem;
-      }
-
-      .floating-card .value {
-        display: block;
-        margin-top: 6px;
-        font-size: 1.8rem;
-        font-weight: 700;
-      }
-
-      .section {
         padding: 80px 0;
       }
 
-      .section-header {
-        max-width: 640px;
-        margin-bottom: 36px;
+      .grid {
+        grid-template-columns: 1fr;
       }
 
-      .section-header h2 {
-        margin: 10px 0 12px;
-        font-size: clamp(2rem, 4vw, 3rem);
-        letter-spacing: -0.05em;
+      h1 {
+        letter-spacing: -2px;
       }
+    }
+  </style>
+</head>
 
-      .section-header p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 1.05rem;
-      }
+<body>
 
-      .services-grid,
-      .feature-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-      }
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">SAVERA<span>TECH</span></div>
+      <div>AI • Cloud • Software</div>
+    </div>
+  </nav>
 
-      .card {
-        background: rgba(19, 38, 61, 0.72);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 28px 22px;
-        box-shadow: var(--shadow);
-      }
+  <main>
 
-      .icon {
-        display: inline-grid;
-        place-items: center;
-        width: 52px;
-        height: 52px;
-        border-radius: 16px;
-        background: linear-gradient(135deg, rgba(78, 205, 196, 0.2), rgba(77, 163, 255, 0.2));
-        color: var(--primary);
-        font-size: 1.3rem;
-        margin-bottom: 14px;
-      }
+    <section class="hero">
+      <div class="container">
 
-      .card h3 {
-        margin: 0 0 10px;
-        font-size: 1.35rem;
-      }
+        <div class="eyebrow">
+          AI • Cloud • Software
+        </div>
 
-      .card p {
-        margin: 0;
-        color: var(--muted);
-      }
+        <h1>
+          Build smarter.<br>
+          <span>Move faster.</span>
+        </h1>
 
-      .about {
-        background: linear-gradient(180deg, rgba(10, 18, 28, 0.3), rgba(9, 19, 31, 0.8));
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-      }
+        <p>
+          Savera Tech builds practical AI, cloud and software solutions
+          for modern businesses.
+        </p>
 
-      .about-inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 36px;
-      }
-
-      .about-panel {
-        background: rgba(19, 38, 61, 0.7);
-        border: 1px solid var(--line);
-        border-radius: 24px;
-        padding: 26px;
-      }
-
-      .check-list {
-        list-style: none;
-        padding: 0;
-        margin: 24px 0 0;
-        display: grid;
-        gap: 14px;
-      }
-
-      .check-list li {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: var(--text);
-      }
-
-      .check-list li::before {
-        content: "✓";
-        display: inline-grid;
-        place-items: center;
-        width: 22px;
-        height: 22px;
-        border-radius: 50%;
-        background: rgba(78, 205, 196, 0.15);
-        color: var(--primary);
-        font-weight: 700;
-      }
-
-      .cta {
-        padding: 80px 0 100px;
-      }
-
-      .cta-box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        background: linear-gradient(135deg, rgba(78, 205, 196, 0.15), rgba(77, 163, 255, 0.1));
-        border: 1px solid rgba(78, 205, 196, 0.25);
-        border-radius: 28px;
-        padding: 32px 28px;
-        box-shadow: var(--shadow);
-      }
-
-      .cta-box h3 {
-        margin: 0 0 8px;
-        font-size: clamp(1.8rem, 3vw, 2.5rem);
-        letter-spacing: -0.04em;
-      }
-
-      .cta-box p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      footer {
-        border-top: 1px solid var(--line);
-        padding: 28px 0 48px;
-        color: var(--muted);
-      }
-
-      .footer-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        flex-wrap: wrap;
-      }
-
-      @media (max-width: 900px) {
-        .hero-inner,
-        .about-inner,
-        .services-grid,
-        .feature-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .nav-links {
-          display: none;
-        }
-
-        .cta-box {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
-
-      @media (max-width: 560px) {
-        .nav {
-          min-height: 68px;
-        }
-
-        .hero {
-          padding-top: 60px;
-        }
-
-        .hero-actions {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .primary-btn,
-        .secondary-btn,
-        .nav-cta {
-          width: 100%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="container nav">
-        <a href="#home" class="brand" aria-label="Savera Tech home">
-          <span class="brand-mark">S</span>
-          <span>Savera Tech</span>
+        <a class="button" href="#contact">
+          Let's talk
         </a>
 
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <a class="nav-cta" href="#contact">Let’s Talk</a>
       </div>
-    </header>
+    </section>
 
-    <main id="home">
-      <section class="hero">
-        <div class="container hero-inner">
-          <div>
-            <span class="eyebrow">Smart digital growth</span>
-            <h1>Build a stronger future with Savera Tech.</h1>
-            <p class="lead">
-              We design high-impact digital experiences, modern business tools, and streamlined online solutions that help brands grow faster and work smarter.
-            </p>
 
-            <div class="hero-actions">
-              <a href="#contact" class="primary-btn">Book a Consultation</a>
-              <a href="#services" class="secondary-btn">Explore Services</a>
-            </div>
+    <section class="services">
 
-            <div class="hero-meta" aria-label="Business stats">
-              <div class="stat">
-                <strong>4+</strong>
-                <span>Years experience</span>
-              </div>
-              <div class="stat">
-                <strong>120+</strong>
-                <span>Projects launched</span>
-              </div>
-              <div class="stat">
-                <strong>99%</strong>
-                <span>Client satisfaction</span>
-              </div>
-            </div>
-          </div>
+      <div class="container">
 
-          <div class="visual-card" aria-label="Dashboard preview">
-            <div class="dashboard">
-              <div class="dashboard-top">
-                <div class="dots" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <span>Growth Analytics</span>
-              </div>
-
-              <div class="chart">
-                <svg viewBox="0 0 300 220" preserveAspectRatio="none" aria-hidden="true">
-                  <path d="M0 180 C45 160, 70 100, 110 120 S180 90, 220 130 S260 60, 300 35 L300 220 L0 220 Z" fill="rgba(78,205,196,0.18)"></path>
-                  <path d="M0 175 C45 156, 70 98, 110 118 S180 88, 220 128 S260 58, 300 35" fill="none" stroke="#4ecdc4" stroke-width="4" stroke-linecap="round"></path>
-                </svg>
-              </div>
-            </div>
-
-            <div class="floating-card">
-              <span class="label">Monthly growth</span>
-              <span class="value">+38.4%</span>
-            </div>
-          </div>
+        <div class="section-title">
+          <h2>What we build</h2>
+          <p>Technology designed around real business needs.</p>
         </div>
-      </section>
 
-      <section class="section" id="services">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">What we do</span>
-            <h2>Technology solutions designed for momentum.</h2>
+        <div class="grid">
+
+          <div class="card">
+            <div class="card-number">01</div>
+            <h3>AI & RAG</h3>
             <p>
-              We build practical digital systems that make businesses more efficient, visible, and scalable.
+              AI-powered knowledge assistants, document search
+              and retrieval-augmented generation applications.
             </p>
           </div>
 
-          <div class="services-grid">
-            <article class="card">
-              <div class="icon">⚡</div>
-              <h3>Web Development</h3>
-              <p>Modern, fast, and responsive websites tailored to your business goals and customer experience.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon">📈</div>
-              <h3>Business Growth</h3>
-              <p>Strategy-focused digital services that improve visibility, conversion, and sustainable growth.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon">🧩</div>
-              <h3>Custom Solutions</h3>
-              <p>Flexible software and workflow improvements that help teams operate more efficiently.</p>
-            </article>
+          <div class="card">
+            <div class="card-number">02</div>
+            <h3>AWS & Cloud</h3>
+            <p>
+              Cloud-native applications, APIs, serverless
+              architectures and scalable AWS infrastructure.
+            </p>
           </div>
+
+          <div class="card">
+            <div class="card-number">03</div>
+            <h3>Custom Software</h3>
+            <p>
+              Modern web applications and software built
+              around the way your business actually works.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">04</div>
+            <h3>Integrations & Automation</h3>
+            <p>
+              Connect systems, automate repetitive processes
+              and turn manual workflows into efficient digital ones.
+            </p>
+          </div>
+
         </div>
-      </section>
 
-      <section class="section about" id="about">
-        <div class="container about-inner">
-          <div>
-            <div class="section-header" style="margin-bottom: 0;">
-              <span class="eyebrow">Why Savera Tech</span>
-              <h2>We blend strategy, design, and technical execution.</h2>
-              <p>
-                From startup ideas to established businesses, we help teams turn digital opportunities into measurable results.
-              </p>
-            </div>
-          </div>
-
-          <div class="about-panel">
-            <h3 style="margin-top: 0;">Our approach</h3>
-            <ul class="check-list">
-              <li>Clear roadmap from concept to launch</li>
-              <li>Clean user-focused design and experiences</li>
-              <li>Reliable performance and scalable systems</li>
-              <li>Support that grows with your business</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="solutions">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Our strengths</span>
-            <h2>Built for businesses ready to scale.</h2>
-          </div>
-
-          <div class="feature-grid">
-            <article class="card">
-              <div class="icon">🌐</div>
-              <h3>Brand Presence</h3>
-              <p>Professional online experiences that make your business feel credible and memorable.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon">💬</div>
-              <h3>Automation</h3>
-              <p>Smarter workflows and digital tooling that save time and improve everyday operations.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon">🔒</div>
-              <h3>Trust & Quality</h3>
-              <p>Thoughtful execution, attention to detail, and reliable results you can count on.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta" id="contact">
-        <div class="container">
-          <div class="cta-box">
-            <div>
-              <h3>Let’s build something meaningful.</h3>
-              <p>Talk to Savera Tech about your next web, digital, or business growth project.</p>
-            </div>
-            <a href="mailto:hello@saveratech.com" class="primary-btn">hello@saveratech.com</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container footer-inner">
-        <div>© 2026 Savera Tech</div>
-        <div>Digital solutions for a smarter tomorrow</div>
       </div>
-    </footer>
-  </body>
+
+    </section>
+
+
+    <section class="about">
+
+      <div class="container">
+
+        <div class="about-inner">
+
+          <h2>Technology without the unnecessary complexity.</h2>
+
+          <p>
+            Savera Tech focuses on practical technology that solves
+            genuine business problems — from AI-powered knowledge
+            systems to cloud applications and software integrations.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <h2>Have an idea?</h2>
+
+        <p>
+          Let's explore what technology can do for your business.
+        </p>
+
+        <a class="button" href="mailto:hello@saveratech.com.au">
+          Contact Savera Tech
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 Savera Tech. All rights reserved.
+  </footer>
+
+</body>
 </html>
